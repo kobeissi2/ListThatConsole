@@ -14,7 +14,7 @@ var correctAnswer = "";
 var scoreNum = 0;
 
 score.innerHTML = scoreNum;
-playAgain.style.visibility = "hidden";
+playAgain.style.display = "none";
 
 FillImagesAndAnswers();
 GetFourAnswers();
@@ -323,7 +323,7 @@ var isWinnerOrLoser = function WinnerOrLoser() {
     second.disabled = true;
     third.disabled = true;
     fourth.disabled = true;
-    playAgain.style.visibility = "visible";
+    playAgain.style.display = "inline";
     return true;
   }
   return false;
