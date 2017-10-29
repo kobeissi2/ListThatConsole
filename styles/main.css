@@ -95,6 +95,11 @@
   #score {
     font-size: 20px;
   }
+
+#score-dialog{
+  margin-left:100px;
+}
+
   #scoreDiv {
     background-color: rgba(52, 172, 228, 0.664);
     padding-left: 200px;
