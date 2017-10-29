@@ -30,6 +30,10 @@ input {
   margin-bottom: 20px;
 }
 
+footer {
+  margin-left: -25px;
+}
+
 #score-div {
   background-color: rgba(52, 172, 228, 0.664);
   text-align: center;
@@ -67,9 +71,10 @@ input {
   }
   input[type="button"] {
     width: 300px;
+    margin: 10px;
   }
-  footer {
-    margin-left: -25px;
+  #score-div{
+    margin: -50px;
   }
 }
 
@@ -86,8 +91,5 @@ input {
     margin-left: 50px;
     margin-right: 50px;
     width: 200px;
-  }
-  footer {
-    margin-left: -25px;
   }
 }
