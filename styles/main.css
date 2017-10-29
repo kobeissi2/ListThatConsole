@@ -1,117 +1,93 @@
-@media (max-width:767px){
-  html {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: rgb(28, 77, 133);
-    text-align: center !important;
-    margin: auto !important;
-  }
-  header {
-    background-color: rgb(78, 78, 185);
-  }
+html {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(28, 77, 133);
+  text-align: center !important;
+  margin: auto !important;
+}
+
+header {
+  background-color: rgb(78, 78, 185);
+}
+
+input[type="button"] {
+  background-color: rgb(87, 171, 209);
+  color: rgb(255, 255, 255);
+}
+
+main {
+  background-color: rgb(70, 70, 151);
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#score-div {
+  background-color: rgba(52, 172, 228, 0.664);
+  text-align: center;
+}
+
+#score-dialog,
+#score {
+  font-size: 20px;
+}
+
+#imgDiv {
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+#button-div {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#score-div {
+  padding-top: 50px;
+}
+
+#play-again {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
   img {
     margin-top: 20px;
     margin-bottom: -20px;
     width: 50%;
     height: 50%;
   }
-  input {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
   input[type="button"] {
-    background-color: rgb(87, 171, 209);
-    width : 300px;
-    color: rgb(255, 255, 255);
-  }
-  main {
-    background-color: rgb(70, 70, 151);
+    width: 300px;
   }
   footer {
     margin-left: -25px;
   }
-  li {
-    list-style: none;
-  }
-  #score-dialog,
-  #score {
-    font-size: 20px;
-    padding-left:10px;
-  }
-  #scoreDiv {
-    background-color: rgba(52, 172, 228, 0.664);
-  }
-  #imgDiv {
-    padding-bottom: 50px;
-    background-color: white;
-  }
-  #button-div {
-    padding-bottom: 50px;
-    padding-top: 50px;
-  }
 }
 
 @media (min-width: 768px) {
-  html {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: rgb(28, 77, 133);
-    text-align: center !important;
-    margin: auto !important;
-  }
   header {
     margin-bottom: 80px;
-    padding-right:30px;
-    background-color: rgb(78, 78, 185);
+    padding-right: 30px;
   }
   img {
     padding-top: 50px;
   }
   input {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 20px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:200px;
-  }
-  input[type="button"] {
-    background-color: rgb(87, 171, 209);
-    color: rgb(255, 255, 255);
-  }
-  main {
-    background-color: rgb(70, 70, 151);
+    width: 200px;
   }
   footer {
     margin-left: -25px;
-  }
-  li {
-    list-style: none;
-  }
-  #score-dialog,
-  #score {
-    font-size: 20px;
-  }
-
-#score-dialog{
-  margin-left:100px;
-}
-
-  #scoreDiv {
-    background-color: rgba(52, 172, 228, 0.664);
-    padding-left: 200px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-  }
-  #imgDiv {
-    padding-bottom: 50px;
-    background-color: white;
-  }
-  #button-div {
-    padding-bottom: 50px;
-    padding-top: 50px;
   }
 }
