@@ -7,22 +7,40 @@
     <title>List That Console!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
     <header>
-        <h1>List The Console!</h1>
+        <br>
+        <h1>List That Console!</h1>
+        <h3>Instructions:</h3>
+        <ul>
+            <li>Click on the button to pick the console you think the image is.</li>
+            <li>Correct answers give you 100 points while incorrect answers remove 100 points.</li>
+            <li>Get 1000 points to win!</li>
+        </ul>
+        <br>
     </header>
-    <main>
+    <div id="imgDiv">
         <img id="consoleImage">
-        <p id="first"></p>
-        <p id="second"></p>
-        <p id="third"></p>
-        <p id="fourth"></p>
+    </div>
+    <main>
+        <div id="button-div">
+            <input type="button" id="first">
+            <input type="button" id="second">
+            <input type="button" id="third">
+            <input type="button" id="fourth">
+        </div>
+        <div id="scoreDiv">
+            <span id="score-dialog">Your score is: </span>
+            <span id="score"></span>
+            <input type="button" id="play-again" value="Play again?">
+        </div>
     </main>
     <footer>
-
+        <p> Kobeissi &copy;2017</p>
     </footer>
     <script src="scripts/index.js"></script>
 </body>

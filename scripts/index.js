@@ -3,13 +3,23 @@ var first = document.getElementById("first");
 var second = document.getElementById("second");
 var third = document.getElementById("third");
 var fourth = document.getElementById("fourth");
+var score = document.getElementById("score");
+var scoreDialog = document.getElementById("score-dialog");
+var playAgain = document.getElementById("play-again");
 
 var consoleImages = [];
 var answers = [];
 var options = [];
+var correctAnswer = "";
+var scoreNum = 0;
+
+score.innerHTML = scoreNum;
+playAgain.style.visibility = "hidden";
 
 FillImagesAndAnswers();
 GetFourAnswers();
+SetAnswers();
+
 
 function FillImagesAndAnswers() {
   consoleImages[0] = new Image();
@@ -243,12 +253,7 @@ function GetFourAnswers() {
     }
   }
 
-  var correctAnswer = options[Math.floor(Math.random() * 4)];
-  consoleImage.src = consoleImages[correctAnswer].src;
-  first.innerHTML = answers[options[0]];
-  second.innerHTML = answers[options[1]];
-  third.innerHTML = answers[options[2]];
-  fourth.innerHTML = answers[options[3]];
+  correctAnswer = options[Math.floor(Math.random() * 4)];
 }
 
 function isUnique(option) {
@@ -260,3 +265,66 @@ function isUnique(option) {
   }
   return counter > 1 ? false : true;
 }
+
+function SetAnswers() {
+  consoleImage.src = consoleImages[correctAnswer].src;
+  first.value = answers[options[0]];
+  second.value = answers[options[1]];
+  third.value = answers[options[2]];
+  fourth.value = answers[options[3]];
+}
+
+function CheckAnswer(answer) {
+  if (answer == answers[correctAnswer]) {
+    scoreNum += 100;
+  } else {
+    scoreNum -= 100;
+  }
+  score.innerHTML = scoreNum;
+  if (!isWinnerOrLoser()) {
+    GetFourAnswers();
+    SetAnswers();
+  }
+}
+
+first.onclick = function() {
+  CheckAnswer(first.value);
+  WinnerOrLoser();
+};
+
+second.onclick = function() {
+  CheckAnswer(second.value);
+  WinnerOrLoser();
+};
+
+third.onclick = function() {
+  CheckAnswer(third.value);
+  WinnerOrLoser();
+};
+
+fourth.onclick = function() {
+  CheckAnswer(fourth.value);
+  WinnerOrLoser();
+};
+
+playAgain.onclick = function() {
+  location.reload();
+};
+
+var isWinnerOrLoser = function WinnerOrLoser() {
+  if (scoreNum === 1000 || scoreNum === -1000) {
+    scoreDialog.style.display = "none";
+    if (scoreNum === 1000) {
+      score.innerHTML = "You win!";
+    } else {
+      score.innerHTML = "You lose!";
+    }
+    first.disabled = true;
+    second.disabled = true;
+    third.disabled = true;
+    fourth.disabled = true;
+    playAgain.style.visibility = "visible";
+    return true;
+  }
+  return false;
+};
