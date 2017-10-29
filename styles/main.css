@@ -3,7 +3,6 @@ html {
   color: rgb(255, 255, 255);
   background-color: rgb(28, 77, 133);
   text-align: center !important;
-  margin: auto !important;
 }
 
 header {
@@ -49,11 +48,6 @@ footer {
   background-color: white;
 }
 
-#button-div {
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-
 #score-div {
   padding-top: 50px;
 }
@@ -68,13 +62,20 @@ footer {
     margin-bottom: -20px;
     width: 50%;
     height: 50%;
+    padding: 0px;
   }
   input[type="button"] {
     width: 300px;
     margin: 0px 10px 10px 10px;
+    padding: 0px;
   }
   #score-div{
-    margin: -50px;
+    margin: -10px;
+    padding: 0px;
+  }
+  #button-div {
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -91,5 +92,9 @@ footer {
     margin-left: 50px;
     margin-right: 50px;
     width: 200px;
+  }
+  #button-div {
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 }
