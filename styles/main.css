@@ -71,7 +71,7 @@ footer {
   }
   input[type="button"] {
     width: 300px;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
   }
   #score-div{
     margin: -50px;
