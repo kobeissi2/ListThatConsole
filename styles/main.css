@@ -1,4 +1,4 @@
-@media (max-width:499px){
+@media (max-width:767px){
   html {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: rgb(255, 255, 255);
@@ -53,7 +53,7 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   html {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: rgb(255, 255, 255);
